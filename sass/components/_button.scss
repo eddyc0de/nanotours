@@ -27,7 +27,8 @@
 	&:active,
 	&:focus {
 		transform: translateY(-1px);
-		box-shadow: 0 .5rem 1rem rgba($color-black, .2);	
+		box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+		outline: none;
 	}
 	
 	&--white {
