@@ -1,5 +1,5 @@
 .navigation {
-	&__checkbox {
+	&__checkbox { //This is to use the checkbox as a flag to know when the menu is clicked
 		display: none;
 	}
 
@@ -27,7 +27,7 @@
 		}
 	}
 
-	&__background {
+	&__background { //This is to set up the full size background when the menu is opened
 		height: 6rem;
 		width: 6rem;
 		border-radius: 50%;
