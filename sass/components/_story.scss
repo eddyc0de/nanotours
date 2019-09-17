@@ -25,11 +25,17 @@
 		height: 15rem;
 		float: left;
 		overflow: hidden;
-		-webkit-shape-outside: circle(50% at 50% 50%);
-		shape-outside: circle(50% at 50% 50%); //Only works when the element is floated and have width and height set
-		-webkit-clip-path: circle(50% at 50% 50%);
-		clip-path: circle(50% at 50% 50%);
 		transform: translateX(-3rem) skewX(12deg); //Best way to move floated elements with transform
+		overflow: hidden;
+		border-radius: 50%;
+
+		@supports(clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+			-webkit-clip-path: circle(50% at 50% 50%);
+			clip-path: circle(50% at 50% 50%);
+			-webkit-shape-outside: circle(50% at 50% 50%);
+			shape-outside: circle(50% at 50% 50%); //Only works when the element is floated and have width and height set
+			border-radius: none;
+		}
 
 		@include respond(phone) {
 			transform: translateX(-3rem) skewX(0); //Best way to move floated elements with transform
